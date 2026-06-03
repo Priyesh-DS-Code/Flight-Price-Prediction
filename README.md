@@ -1,83 +1,102 @@
-# ✈️ Flight Price Prediction
+# ✈️ Flight Price Prediction System
 
-An end-to-end Machine Learning project that predicts airline ticket prices based on flight details such as airline, source city, destination city, journey date, duration, and number of stops.
+## Overview
 
-The project involves data cleaning, exploratory data analysis (EDA), feature engineering, model training, and price prediction using machine learning techniques.
+Flight Price Prediction System is a Machine Learning project designed to estimate airline ticket prices based on various flight-related attributes such as airline, source city, destination city, journey date, duration, and number of stops.
 
----
-
-## Project Overview
-
-Flight ticket prices fluctuate significantly depending on multiple factors including airline, route, travel date, duration, and stopovers.
-
-The objective of this project is to analyze historical flight booking data and build a machine learning model capable of predicting flight fares accurately.
+The project demonstrates the complete machine learning lifecycle, including data collection, data cleaning, exploratory data analysis, feature engineering, model development, evaluation, and prediction. The objective is to build a reliable predictive model that can assist travelers and businesses in estimating airfare costs.
 
 ---
 
 ## Business Problem
 
-Airfare pricing is dynamic and changes frequently due to demand, seasonality, route popularity, and airline policies.
+Airline ticket prices are highly dynamic and influenced by multiple factors, including travel season, airline selection, route popularity, flight duration, and stopovers.
 
-This project aims to:
+Accurately predicting airfare can help:
 
-- Analyze factors affecting flight prices
-- Understand airline pricing patterns
-- Identify important features influencing ticket cost
-- Build a predictive model for airfare estimation
+* Travelers make informed booking decisions
+* Businesses analyze airline pricing strategies
+* Travel platforms improve price forecasting
+* Data analysts identify key pricing drivers
+
+This project aims to develop a data-driven solution capable of estimating flight ticket prices using historical flight booking data.
 
 ---
 
 ## Dataset Information
 
-The dataset contains flight booking information including:
+The dataset contains flight booking information collected from various airlines and routes.
 
 ### Features
 
-- Airline
-- Date of Journey
-- Source
-- Destination
-- Route
-- Departure Time
-- Arrival Time
-- Duration
-- Total Stops
-- Additional Information
+| Feature                | Description                   |
+| ---------------------- | ----------------------------- |
+| Airline                | Airline operating the flight  |
+| Date of Journey        | Travel date                   |
+| Source                 | Departure city                |
+| Destination            | Arrival city                  |
+| Route                  | Flight route                  |
+| Departure Time         | Flight departure time         |
+| Arrival Time           | Flight arrival time           |
+| Duration               | Total flight duration         |
+| Total Stops            | Number of intermediate stops  |
+| Additional Information | Additional flight information |
 
 ### Target Variable
 
-- Price (Flight Fare)
+| Variable | Description         |
+| -------- | ------------------- |
+| Price    | Airline ticket fare |
 
 ---
 
-## Technology Stack
+## Key Highlights
+
+* End-to-End Machine Learning Workflow
+* Data Cleaning and Preprocessing
+* Exploratory Data Analysis (EDA)
+* Feature Engineering
+* Regression Modeling
+* Model Evaluation
+* Business-Oriented Insights
+* Production-Ready Repository Structure
+
+---
+
+## Tech Stack
 
 ### Programming Language
 
-- Python
+* Python
 
 ### Data Analysis
 
-- Pandas
-- NumPy
+* Pandas
+* NumPy
 
 ### Data Visualization
 
-- Matplotlib
-- Seaborn
+* Matplotlib
+* Seaborn
 
 ### Machine Learning
 
-- Scikit-Learn
+* Scikit-Learn
 
 ### Development Environment
 
-- Jupyter Notebook
+* Jupyter Notebook
 
 ### Version Control
 
-- Git
-- GitHub
+* Git
+* GitHub
+
+### Future Deployment Stack
+
+* Streamlit
+* Docker
+* AWS
 
 ---
 
@@ -86,77 +105,27 @@ The dataset contains flight booking information including:
 ```text
 Flight-Price-Prediction/
 │
-├── Flight-prediction.ipynb
+├── data/
+│   └── dataset.xlsx
+│
+├── notebooks/
+│   └── Flight-Price-Prediction.ipynb
+│
 ├── README.md
 ├── requirements.txt
-└── dataset.xlsx
+└── screenshots/
 ```
 
 ---
 
-## Project Workflow
-
-### 1. Data Collection
-
-- Import flight booking dataset
-- Understand feature distributions
-
-### 2. Data Cleaning
-
-- Handle missing values
-- Remove duplicates
-- Correct data inconsistencies
-
-### 3. Exploratory Data Analysis
-
-- Airline-wise price analysis
-- Source and destination analysis
-- Stop-wise fare analysis
-- Duration vs Price relationship
-- Journey date analysis
-
-### 4. Feature Engineering
-
-- Extract day and month from journey date
-- Extract departure and arrival hours
-- Convert duration into numerical format
-- Encode categorical variables
-
-### 5. Model Building
-
-- Train machine learning models
-- Compare model performance
-- Select the best-performing model
-
-### 6. Model Evaluation
-
-Evaluation metrics:
-
-- R² Score
-- Mean Absolute Error (MAE)
-- Mean Squared Error (MSE)
-- Root Mean Squared Error (RMSE)
-
----
-
-## Key Insights
-
-- Airline choice significantly impacts ticket prices.
-- Flights with multiple stops generally have different pricing patterns compared to non-stop flights.
-- Journey date and travel season strongly influence airfare.
-- Flight duration is an important factor in fare prediction.
-- Source and destination routes contribute significantly to ticket cost variation.
-
----
-
-## Machine Learning Pipeline
+## Machine Learning Workflow
 
 ```text
 Data Collection
         ↓
 Data Cleaning
         ↓
-EDA
+Exploratory Data Analysis
         ↓
 Feature Engineering
         ↓
@@ -171,6 +140,82 @@ Flight Price Prediction
 
 ---
 
+## Exploratory Data Analysis
+
+The dataset was analyzed to understand pricing trends and identify important factors affecting airline fares.
+
+Key analyses performed:
+
+* Airline-wise price distribution
+* Source and destination analysis
+* Route popularity analysis
+* Flight duration analysis
+* Stop-wise fare comparison
+* Journey date trends
+* Correlation analysis
+
+---
+
+## Feature Engineering
+
+The following feature engineering techniques were applied:
+
+* Extracted journey day and month
+* Extracted departure hour and minute
+* Extracted arrival hour and minute
+* Converted flight duration into numerical values
+* Encoded categorical features
+* Removed irrelevant columns
+
+These transformations improved model performance and enabled machine learning algorithms to process the data effectively.
+
+---
+
+## Model Development
+
+Multiple regression techniques can be evaluated to identify the best-performing model for airfare prediction.
+
+The workflow includes:
+
+* Data Splitting
+* Feature Scaling (if required)
+* Model Training
+* Hyperparameter Optimization
+* Model Selection
+
+---
+
+## Model Evaluation
+
+The model was evaluated using standard regression metrics:
+
+* R² Score
+* Mean Absolute Error (MAE)
+* Mean Squared Error (MSE)
+* Root Mean Squared Error (RMSE)
+
+These metrics help assess prediction accuracy and overall model performance.
+
+---
+
+## Key Insights
+
+* Airline selection significantly impacts ticket prices.
+* Flight duration strongly influences airfare.
+* Journey dates affect seasonal pricing trends.
+* Source and destination routes contribute heavily to fare variation.
+* Number of stops impacts pricing patterns across airlines.
+
+---
+
+## Results
+
+The machine learning model successfully learns relationships between flight characteristics and airfare pricing, enabling accurate ticket fare estimation based on user inputs.
+
+The project demonstrates the practical application of machine learning techniques in solving real-world pricing and forecasting problems.
+
+---
+
 ## Installation
 
 ### Clone Repository
@@ -179,7 +224,7 @@ Flight Price Prediction
 git clone https://github.com/Priyesh-DS-Code/Flight-Price-Prediction.git
 ```
 
-### Navigate to Project Folder
+### Navigate to Project Directory
 
 ```bash
 cd Flight-Price-Prediction
@@ -211,44 +256,39 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
----
-
-## Results
-
-The machine learning model successfully learns relationships between flight attributes and ticket prices, enabling accurate airfare predictions for future flight bookings.
 
 ---
 
 ## Skills Demonstrated
 
-- Exploratory Data Analysis (EDA)
-- Feature Engineering
-- Data Cleaning
-- Data Visualization
-- Machine Learning
-- Regression Modeling
-- Model Evaluation
-- Business Analytics
-- Python Programming
-
-
+* Data Cleaning
+* Exploratory Data Analysis (EDA)
+* Feature Engineering
+* Regression Modeling
+* Data Visualization
+* Model Evaluation
+* Business Analytics
+* Machine Learning
+* Python Programming
 
 ---
 
 ## Author
 
-**Priyesh Kumar Kashyap**
+### Priyesh Kumar Kashyap
 
-B.Tech Computer Science Engineering Student
+Machine Learning & Data Science Enthusiast focused on building end-to-end machine learning solutions and production-ready AI applications.
 
-Interested in:
+**Areas of Interest**
 
-- Machine Learning
-- Data Science
-- MLOps
+* Machine Learning
+* Data Science
+* MLOps
+
+**Connect With Me**
 
 GitHub: https://github.com/Priyesh-DS-Code
 
 LinkedIn: https://www.linkedin.com/in/priyeshkumarkashyap
 
----
+*"Transforming data into intelligent solutions through Machine Learning and Data Science."*
